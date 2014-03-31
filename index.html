@@ -1,0 +1,60 @@
+<!doctype html>
+<head>
+<title>Masonry problem</title>
+<style>
+
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}span {text-decoration: none;}
+
+header:after, section:after, footer:before, footer:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+html{background: rgb(244, 244, 244);}
+body {font-family: "Apercu", 'Apercu Regular', 'helvetica neue', helvetica, sans-serif;font-size-adjust:0.5; font-size: 100%; line-height: 1.25em; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: rgb(70, 63, 76);}
+img {width: 100%; height: auto;}
+#container {margin: 1em auto; width: 90%; max-width: 1000px;}
+
+header {margin-bottom: 1em;}
+header .column {float: left; background: yellow;width: 31%; margin: 0 1% 1em;}
+
+article.post {width: 31%; margin:0 1% 1em; float: left;}
+
+</style>
+</head>
+<body>
+<div id="container">
+<header>
+	<div class="column">content</div>
+	<div class="column">content</div>
+	<div class="column">content</div>
+</header>
+
+<section id="index">
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+<article class="post"><img src="http://hi.iamloganmyers.com/designworks/layouts/assets/sample1.jpg"></article>
+</section>
+
+<script src="http://hi.iamloganmyers.com/designworks/assets/masonry.pkgd.min.js"></script>
+<script src="http://hi.iamloganmyers.com/designworks/assets/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+var container = document.querySelector('#index');
+var msnry;
+// initialize Masonry after all images have loaded
+imagesLoaded( container, function() {
+  msnry = new Masonry( container, {
+	  itemSelector: '.post'
+  });
+});
+</script>
+</section>
+</div>
+</body>
+</html>
